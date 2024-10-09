@@ -13,7 +13,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public int Urunid { get; set; }
 
 
-        [Column(TypeName ="Varchar")]
+        [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string UrunAd { get; set; }
 
@@ -22,8 +22,6 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string Marka { get; set; }
-
-
 
 
         public short Stok { get; set; }
@@ -38,6 +36,6 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public Kategori Kategori { get; set; }
 
 
-        public SatisHareket SatisHareket { get; set; }
+        public ICollection<SatisHareket> SatisHarekets { get; set; }
     }
 }
