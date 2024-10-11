@@ -11,7 +11,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         // GET: Departman
         public ActionResult Index()
         {
-            return View(); 
+            return View();
         }
     }
 }
