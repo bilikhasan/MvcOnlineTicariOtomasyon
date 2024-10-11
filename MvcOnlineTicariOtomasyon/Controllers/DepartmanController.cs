@@ -6,11 +6,11 @@ using System.Web.Mvc;
 
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
-    public class DepartmanController : Controller
-    {
+    public class DepartmanController : Controller 
+    { 
         // GET: Departman
         public ActionResult Index()
-        {
+        { 
             return View();
         }
     }
