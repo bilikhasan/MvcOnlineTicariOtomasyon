@@ -8,7 +8,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
 {
     public class DepartmanController : Controller 
     { 
-        // GET: Departman
+        // GET: Departman 
         public ActionResult Index()
         { 
             return View();
