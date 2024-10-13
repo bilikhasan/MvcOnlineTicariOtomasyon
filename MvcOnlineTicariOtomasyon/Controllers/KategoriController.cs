@@ -20,7 +20,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View();
         }
 
-
         [HttpPost]
         public ActionResult KategoriEkle(Kategori k)
         {
