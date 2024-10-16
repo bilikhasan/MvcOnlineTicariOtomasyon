@@ -11,6 +11,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
     {
         // GET: Personel
         Context c = new Context();
+
         public ActionResult Index()
         {
             var degerler = c.Personels.ToList();
