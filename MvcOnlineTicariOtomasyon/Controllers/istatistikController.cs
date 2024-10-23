@@ -63,7 +63,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
 
             var deger16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => y.ToplamTutar).ToString();
             ViewBag.d16 = deger16;
-
+            //Burasıyla ilgili hata dönerse sql'den hatayı SatisHareket>Tarih sutunundan manuel duzeltebilirsin. Kodda sorun yok!
 
 
             return View();
