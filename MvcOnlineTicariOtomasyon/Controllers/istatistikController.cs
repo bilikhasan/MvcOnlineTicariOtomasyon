@@ -65,7 +65,11 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             ViewBag.d16 = deger16;
             //Burasıyla ilgili hata dönerse sql'den hatayı SatisHareket>Tarih sutunundan manuel duzeltebilirsin. Kodda sorun yok!
 
+            return View();
+        }
 
+        public ActionResult KolayTablolar()
+        {
             return View();
         }
     }
