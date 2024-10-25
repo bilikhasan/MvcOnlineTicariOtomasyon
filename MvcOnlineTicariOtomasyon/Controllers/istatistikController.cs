@@ -70,7 +70,20 @@ namespace MvcOnlineTicariOtomasyon.Controllers
 
         public ActionResult KolayTablolar()
         {
-            return View();
+            var sorgu = from x in c.Carilers
+                        group x by x.CariSehir into g
+                        select new SinifGrup
+                        {
+                            Sehir = g.Key,
+                            Sayi = g.Count()
+                        };
+
+            return View(sorgu.ToList());
+        }
+
+        public PartialViewResult Partial1()
+        {
+            return PartialView();
         }
     }
 }
