@@ -61,8 +61,8 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var deger15 = c.SatisHarekets.Count(x => x.Tarih == bugun).ToString();
             ViewBag.d15 = deger15;
 
-            var deger16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => y.ToplamTutar).ToString();
-            ViewBag.d16 = deger16;
+            //var deger16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => y.ToplamTutar).ToString();
+            //ViewBag.d16 = deger16;
             //Burasıyla ilgili hata dönerse sql'den hatayı SatisHareket>Tarih sutunundan manuel duzeltebilirsin. Kodda sorun yok!
 
             return View();
@@ -82,7 +82,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         public PartialViewResult Partial1()
         {
             var sorgu2 = from x in c.Personels
-                         group x by x.Departmanid into g
+                         group x by x.Departman.DepartmanAd into g
                          select new SinifGrup2
                          {
                              Departman = g.Key,
