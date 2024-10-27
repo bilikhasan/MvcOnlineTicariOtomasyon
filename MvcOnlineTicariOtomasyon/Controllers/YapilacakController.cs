@@ -26,7 +26,9 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var deger4 = (from x in c.Carilers select x.CariSehir).Distinct().Count().ToString();
             ViewBag.d4 = deger4;
 
-            return View();
+
+            var yapilacaklar = c.Yapilacaks.ToList();
+            return View(yapilacaklar);
         }
     }
 }
