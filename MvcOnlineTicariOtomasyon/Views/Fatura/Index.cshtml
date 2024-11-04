@@ -5,40 +5,88 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+
+<!--<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<!-- Bootstrap CSS -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css" integrity="sha512-ywAV/i6U+pOK6UOv6RiXhcbpGgYl+EdrKh0rL1FQwJyzqyk+ivAF0zBvNZR9XpbgmJ8Yr+1yvGgpgnQJwqgd+Q==" crossorigin="anonymous" />-->
+<!-- Bootstrap JS -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js" integrity="sha512-9d9XV7M+8L60Wmu7vXTxJaA/q+GGtb/+gCbmX1R0bKTVoQJgNb/DzF0Jr8rH0CvwvqjKgBn7sYH4n4q3GqObiQ==" crossorigin="anonymous"></script>
+</head>-->
+
+
+
+
 
 <table class="table table-bordered" style="margin-top:20px">
     <tr>
-        <th>ID</th>
-        <th>Seri No</th>
-        <th>Sıra No</th>
-        <th>Vergi Dairesi</th>
+        <th>Seri Sıra No</th>
         <th>Tarih</th>
         <th>Saat</th>
-        <th>Teslim Eden</th>
-        <th>Teslim Alan</th>
         <th>Toplam</th>
         <th>Güncelle</th>
         <th>Detaylar</th>
+        <th>Yeni Kalem</th>
     </tr>
     @foreach (var k in Model)
     {
         <tr>
-            <td>@k.Faturaid</td>
-            <td>@k.FaturaSeriNo</td>
-            <td>@k.FaturaSiraNo</td>
-            <td>@k.VergiDairesi</td>
+            <td>@k.FaturaSeriNo @k.FaturaSiraNo</td>
             <td>@k.Tarih</td>
             <td>@k.Saat</td>
-            <td>@k.TeslimEden</td>
-            <td>@k.TeslimAlan</td>
-            <td>@k.Toplam</td>
+            <td>@k.Toplam ₺</td>
             <td><a href="/Fatura/FaturaGetir/@k.Faturaid" class="btn btn-warning">Güncelle</a></td>
-
             <td><a href="/Fatura/FaturaDetay/@k.Faturaid" class="btn btn-default" style="background-color:lightcoral; color:white">Detaylar</a></td>
+
+
+
+            <td><a href="/Fatura/FaturaDetay/@k.Faturaid" class="btn btn-default" style="background-color:thistle; color:white">Kalem</a></td>
+
         </tr>
     }
 </table>
-
 <a href="/Fatura/FaturaEkle/" class=" btn btn-info">Yeni Fatura Girişi</a>
+<br />
+<br />
 
 
+
+
+
+
+
+
+
+
+<button type="button" class="btn btn-warning" style="background-color:#d95151; color:white" data-toggle="modal" data-target="#Modal1">Popup Penceresi</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Popup Diyalog Ekranı</h2>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Seri No</td>                                @* POPUP YAPIMI*@
+                        <td>Sıra No</td>                                @* POPUP YAPIMI*@
+                        <td>Tutar</td>                                  @* POPUP YAPIMI*@
+                    </tr>                                               @* POPUP YAPIMI*@
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.FaturaSeriNo</td>
+                            <td>@x.FaturaSiraNo</td>
+                            <td>@x.Toplam</td>
+                        </tr>
+                    }
+                </table>
+                <button class="btn btn-danger" data-dismiss="modal">Tamam</button>
+            </div>
+        </div>
+    </div>
+</div>

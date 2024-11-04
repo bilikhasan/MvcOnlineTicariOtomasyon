@@ -61,8 +61,9 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var deger15 = c.SatisHarekets.Count(x => x.Tarih == bugun).ToString();
             ViewBag.d15 = deger15;
 
-            //var deger16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => y.ToplamTutar).ToString();
-            //ViewBag.d16 = deger16;
+            var deger16 = c.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => (decimal?)y.ToplamTutar).ToString();
+            ViewBag.d16 = deger16;
+            
             //Burasıyla ilgili hata dönerse sql'den hatayı SatisHareket>Tarih sutunundan manuel duzeltebilirsin. Kodda sorun yok!
 
             return View();
@@ -104,12 +105,12 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         public PartialViewResult Partial4()
         {
             var sorgu = from x in c.Uruns
-                         group x by x.Marka into g
-                         select new SinifGrup3
-                         {
-                             marka = g.Key,
-                             sayi = g.Count()
-                         };
+                        group x by x.Marka into g
+                        select new SinifGrup3
+                        {
+                            marka = g.Key,
+                            sayi = g.Count()
+                        };
             return PartialView(sorgu.ToList());
         }
     }
