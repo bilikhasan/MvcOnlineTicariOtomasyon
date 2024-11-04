@@ -2,6 +2,9 @@
 using System;
 using System.Linq;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
+
 
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
@@ -9,9 +12,9 @@ namespace MvcOnlineTicariOtomasyon.Controllers
     {
         // GET: Kategori
         Context c = new Context();
-        public ActionResult Index()
+        public ActionResult Index(int sayfa = 1)
         {
-            var degerler = c.Kategoris.ToList();
+            var degerler = c.Kategoris.ToList().ToPagedList(sayfa,4);
             return View(degerler);
         }
         [HttpGet]
@@ -39,7 +42,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var kategori = c.Kategoris.Find(id);
             return View("KategoriGetir", kategori);
         }
-        public ActionResult KategoriGuncelle (Kategori k )
+        public ActionResult KategoriGuncelle(Kategori k)
         {
             var ktgr = c.Kategoris.Find(k.KategoriID);
             ktgr.KategoriAd = k.KategoriAd;

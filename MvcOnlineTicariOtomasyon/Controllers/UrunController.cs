@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
+using PagedList;
 
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
@@ -11,10 +12,14 @@ namespace MvcOnlineTicariOtomasyon.Controllers
     {
         // GET: Urun
         Context c = new Context();
-        public ActionResult Index()
+        public ActionResult Index(string p)
         {
-            var urunler = c.Uruns.Where(x => x.Durum == true).ToList();
-            return View(urunler);
+            var urunler = from x in c.Uruns select x;
+            if(!string.IsNullOrEmpty(p))
+            {
+                urunler = urunler.Where(y => y.UrunAd.Contains(p));
+            }
+            return View(urunler.ToList());
         }
         [HttpGet]
         public ActionResult YeniUrun()
