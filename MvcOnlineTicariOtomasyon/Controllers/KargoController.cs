@@ -20,7 +20,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
                 k = k.Where(y => y.TakipKodu.Contains(p));
             }
             return View(k.ToList());
-
         }
 
         [HttpGet]
