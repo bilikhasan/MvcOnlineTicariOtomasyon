@@ -22,5 +22,6 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public DbSet<Yapilacak> Yapilacaks { get; set; }        //Ekleme yapıldıktan sonra "update-database -Force" 
         public DbSet<KargoDetay> KargoDetays { get; set; }
         public DbSet<KargoTakip> KargoTakips { get; set; }
+        public DbSet<mesajlar> Mesajlars { get; set; }
     }
 }
