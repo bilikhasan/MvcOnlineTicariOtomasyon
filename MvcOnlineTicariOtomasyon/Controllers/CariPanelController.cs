@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
+    [Authorize]   //İŞTE BURADA KENDİSİ :)
     public class CariPanelController : Controller
     {
-        // GET: CariPanel
         Context c = new Context();
 
-        [Authorize]
         public ActionResult Index()
         {
             var mail = (string)Session["CariMail"];
@@ -87,14 +87,31 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         {
             var mail = (string)Session["CariMail"];
             m.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
-
             m.Gonderici = mail;
-
 
             c.Mesajlars.Add(m);
             c.SaveChanges();
             return RedirectToAction("Index");
         }
 
+        public ActionResult KargoTakip(string p)
+        {
+            var k = from x in c.KargoDetays select x;
+            k = k.Where(y => y.TakipKodu.Contains(p));
+            return View(k.ToList());
+        }
+
+        public ActionResult CariKargoTakip(string id)
+        {
+            var degerler = c.KargoTakips.Where(x => x.TakipKodu == id).ToList();
+            return View(degerler);
+        }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index", "Login");
+        }
     }
 }
