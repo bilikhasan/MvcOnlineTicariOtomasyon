@@ -1,6 +1,6 @@
 Hello,
 
-I’d like to share my MVCOnlineCommercialAutomation project with you. This project was developed under the mentorship of Murat Yücedağ on Udemy. Below are the details of the project:
+I’d like to share my "MVCOnlineCommercialAutomation" project with you. This project was developed under the mentorship of Murat Yücedağ on Udemy. Below are the details of the project:
 
 Project Features
 
