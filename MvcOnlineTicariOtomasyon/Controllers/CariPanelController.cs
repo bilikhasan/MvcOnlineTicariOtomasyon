@@ -140,5 +140,15 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var veriler = c.Mesajlars.Where(x => x.Gonderici == "admin").ToList();
             return PartialView(veriler);
         }
+
+        public ActionResult CariBilgiGuncelle(Cariler cr)
+        {
+            var cari = c.Carilers.Find(cr.Cariid);
+            cari.CariAd = cr.CariAd;
+            cari.CariSoyad = cr.CariSoyad;
+            cari.CariSifre = cr.CariSifre;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
