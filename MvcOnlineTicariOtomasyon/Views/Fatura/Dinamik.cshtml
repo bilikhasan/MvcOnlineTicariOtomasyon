@@ -12,7 +12,8 @@
             <h2 class="panel-title pull-left" style="margin-left:10px;">
                 <strong>Fatura Kalem & İşlemleri</strong>
             </h2>
-            <button style="margin-right:10px" class="btn btn-primary pull-right" onclick="addNewOrder()">Fatura Girişi</button>
+            @*<button style="margin-right:10px" class="btn btn-primary pull-right" onclick="addNewOrder()">Fatura Girişi</button>*@
+            <button style="margin-right:10px" class="btn btn-primary pull-right" data-bs-toggle="modal" data-bs-target="#newOrderModal">Fatura Girişi</button>
         </div>
     </div>
     @*Fatura Listesi*@
@@ -64,37 +65,76 @@
 
 
 
-<!--<div class="modal fade" id="newOrderModal">
+<div class="modal fade" id="newOrderModal">
     <div class="modal-dialog modal-lg" style=" width: 900px !important;">
         <div class="modal-content">
             <div class="modal-header">
                 <a href="#" class="close" data-dismiss="modal">&times;</a>
-                <h4>Add New Order</h4>
+                <h4>Yeni Fatura Girişi</h4>
             </div>
             <form id="NewOrderForm">
-                <div class="modal-body">-->
-@*Customer Details*@
-<!--<h5 style="color:#ff6347">Customer Details</h5>
-<hr />
-<div class="form-horizontal">
-    <input type="text" id="Musteri" />
-    <div class="form-group">
-        <label class="control-label col-md-2">
-            Customer Name
-        </label>
-        <div class="col-md-4">
-            <input type="text" id="ad" name="ad" placeholder="Customer Name" class="form-control" />
-        </div>
-        <label class="control-label col-md-2">
-            Address
-        </label>
-        <div class="col-md-4">
-            <input type="text" id="sehir" name="sehir" placeholder="Customer Address" class="form-control" />
-        </div>
-    </div>
-</div>-->
-@*Order Details*@
-<!--<h5 style="margin-top:10px;color:#ff6347">Order Details</h5>
+                <div class="modal-body">
+                    @*Fatura Detayları*@
+                    <h5 style="color:#ff6347">Fatura Detayları</h5>
+                    <hr />
+                    <div class="form-horizontal">
+                        <input type="hidden" id="Faturaid" />
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                Seri No
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="FaturaSeriNo" name="FaturaSeriNo" placeholder="Seri Numarası" class="form-control" />
+                            </div>
+                            <label class="control-label col-md-2">
+                                Sıra No
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="FaturaSiraNo" name="FaturaSiraNo" placeholder="Sıra Numarası" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                Tarih
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="Tarih" name="Tarih" placeholder="Tarihi Giriniz" class="form-control" />
+                            </div>
+                            <label class="control-label col-md-2">
+                                Vergi Dairesi
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="VergiDairesi" name="VergiDairesi" placeholder="VergiDairesi Giriniz" class="form-control" />
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                Saat
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="Saat" name="Saat" placeholder="Saat Giriniz" class="form-control" />
+                            </div>
+                            <label class="control-label col-md-2">
+                                Teslim Eden
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="TeslimEden" name="TeslimEden" placeholder="Teslim Eden Cari/Personel" class="form-control" />
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                    @*Order Details*@
+                    <h5 style="margin-top:10px;color:#ff6347">Order Details</h5>
                     <hr />
                     <div class="form-horizontal">
                         <input type="hidden" id="id" />
@@ -138,18 +178,20 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="reset" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     <button id="saveOrder" type="submit" class="btn btn-danger">Save Order</button>
                 </div>
             </form>
         </div>
     </div>
-</div>-->
-@*Adım 3*@
+</div>
 
 
 
-<!--@section scripts{
+
+
+Adım 3
+@section scripts{
     <script>
         //Show Modal.
         function addNewOrder() {
@@ -228,4 +270,4 @@
             });
         });
     </script>
-}-->
+}
