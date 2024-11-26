@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
@@ -68,6 +69,14 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             c.FaturaKalems.Add(p);
             c.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Dinamik()
+        {
+            Class4 cs = new Class4();
+            cs.deger1 = c.Faturalars.ToList();
+            cs.deger2 = c.FaturaKalems.ToList();
+            return View(cs);
         }
     }
 }
