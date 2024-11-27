@@ -78,99 +78,121 @@
                     <h5 style="color:#ff6347">Fatura Detayları</h5>
                     <hr />
                     <div class="form-horizontal">
-                        <input type="hidden" id="Faturaid" />
-                        <div class="form-group">
-                            <label class="control-label col-md-2">
-                                Seri No
-                            </label>
-                            <div class="col-md-4">
-                                <input type="text" id="FaturaSeriNo" name="FaturaSeriNo" placeholder="Seri Numarası" class="form-control" />
+                        <div class="row">
+                            <!-- Sol taraf -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Seri No</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="FaturaSeriNo" name="FaturaSeriNo" placeholder="Seri Numarası" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Tarih</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="Tarih" name="Tarih" placeholder="Tarihi Giriniz" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Saat</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="Saat" name="Saat" placeholder="Saati Girin" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Teslim Eden</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="TeslimEden" name="TeslimEden" placeholder="Teslim Eden Cari/Personel" class="form-control" />
+                                    </div>
+                                </div>
                             </div>
-                            <label class="control-label col-md-2">
-                                Sıra No
-                            </label>
-                            <div class="col-md-4">
-                                <input type="text" id="FaturaSiraNo" name="FaturaSiraNo" placeholder="Sıra Numarası" class="form-control" />
+                            <!-- Sağ taraf -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Sıra No</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="FaturaSiraNo" name="FaturaSiraNo" placeholder="Sıra Numarası" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Vergi Dairesi</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="VergiDairesi" name="VergiDairesi" placeholder="VergiDairesi Giriniz" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Teslim Alan</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="TeslimAlan" name="TeslimAlan" placeholder="Teslim Alan Cari/Personel" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Toplam</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="Toplam" name="Toplam" placeholder="Toplam Tutar" class="form-control" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-2">
-                                Tarih
-                            </label>
-                            <div class="col-md-4">
-                                <input type="text" id="Tarih" name="Tarih" placeholder="Tarihi Giriniz" class="form-control" />
-                            </div>
-                            <label class="control-label col-md-2">
-                                Vergi Dairesi
-                            </label>
-                            <div class="col-md-4">
-                                <input type="text" id="VergiDairesi" name="VergiDairesi" placeholder="VergiDairesi Giriniz" class="form-control" />
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="form-group">
-                            <label class="control-label col-md-2">
-                                Saat
-                            </label>
-                            <div class="col-md-4">
-                                <input type="text" id="Saat" name="Saat" placeholder="Saat Giriniz" class="form-control" />
-                            </div>
-                            <label class="control-label col-md-2">
-                                Teslim Eden
-                            </label>
-                            <div class="col-md-4">
-                                <input type="text" id="TeslimEden" name="TeslimEden" placeholder="Teslim Eden Cari/Personel" class="form-control" />
-                            </div>
-                        </div>
-
-
-
-
-
-
-
                     </div>
-                    @*Order Details*@
-                    <h5 style="margin-top:10px;color:#ff6347">Order Details</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    @*Fatura Kalemleri *@
+                    <h5 style="margin-top:10px;color:#ff6347">Fatura Kalemleri</h5>
                     <hr />
                     <div class="form-horizontal">
                         <input type="hidden" id="id" />
                         <div class="form-group">
                             <label class="control-label col-md-2">
-                                Product Name
+                                Açıklama
                             </label>
                             <div class="col-md-4">
-                                <input type="text" id="urun" name="urun" placeholder="aa Name" class="form-control" />
+                                <input type="text" id="Aciklama" name="Aciklama" placeholder="Ürün / Birim Açıklamasını Giriniz" class="form-control" />
                             </div>
                             <label class="control-label col-md-2">
-                                Price
+                                Fiyat
                             </label>
                             <div class="col-md-4">
-                                <input type="number" id="Fiyat" name="Fiyat" placeholder="Product Price" class="form-control" />
+                                <input type="number" id="BirimFiyat" name="BirimFiyat" placeholder="Birim Başına Fiyat Miktarı" class="form-control" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-2">
-                                Quantity
+                                Miktar
                             </label>
                             <div class="col-md-4">
-                                <input type="number" id="Adet" name="Adet" placeholder="Quantity" class="form-control" />
+                                <input type="number" id="Miktar" name="Miktar" placeholder="Miktar Girinz" class="form-control" />
                             </div>
                             <div class="col-md-2 col-lg-offset-4">
-                                <a id="addToList" class="btn btn-primary">Add To List</a>
+                                <a id="addToList" class="btn btn-primary">Listeye Ekle</a>
                             </div>
                         </div>
                         <table id="detailsTable" class="table">
                             <thead>
                                 <tr>
-                                    <th style="width:30%">Product</th>
-                                    <th style="width:20%">Unit Price</th>
-                                    <th style="width:15%">Quantity</th>
-                                    <th style="width:25%">Amount</th>
-                                    <th style="width:10%"></th>
+                                    <th style="width:30%">Açıklama</th>
+                                    <th style="width:20%">Miktar</th>
+                                    <th style="width:15%">Fiyat</th>
+                                    <th style="width:25%">Tutar</th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
@@ -178,8 +200,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="reset" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-                    <button id="saveOrder" type="submit" class="btn btn-danger">Save Order</button>
+                    <button type="reset" class="btn btn-default" data-bs-dismiss="modal">Kapat</button>
+                    <button id="saveOrder" type="submit" class="btn btn-danger">Faturayı Kaydet</button>
                 </div>
             </form>
         </div>
@@ -200,21 +222,22 @@ Adım 3
         //Add Multiple Order.
         $("#addToList").click(function (e) {
             e.preventDefault();
-            if ($.trim($("#urun").val()) == "" || $.trim($("#Fiyat").val()) == "" || $.trim($("#Adet").val()) == "") return;
-            var urun = $("#urun").val(),
-                Fiyat = $("#Fiyat").val(),
-                Adet = $("#Adet").val(),
+            if ($.trim($("#Aciklama").val()) == "" || $.trim($("#BirimFiyat").val()) == "" || $.trim($("#Miktar").val()) == "") return;
+
+            var Aciklama = $("#Aciklama").val(),
+                BirimFiyat = $("#BirimFiyat").val(),
+                Miktar = $("#Miktar").val(),
                 detailsTableBody = $("#detailsTable tbody");
-            var productItem = '<tr><td>' + urun + '</td><td>' + Adet + '</td><td>' + Fiyat + '</td><td>' + (parseFloat(Fiyat) * parseInt(Adet)) + '</td><td><a data-itemId="0" href="#" class="deleteItem">Remove</a></td></tr>';
-            detailsTableBody.append(productItem);
+            var degerler = '<tr><td>' + Aciklama + '</td><td>' + Miktar + '</td><td>' + BirimFiyat + '</td><td>' + (parseFloat(BirimFiyat) * parseInt(Miktar)) + '</td><td><a data-itemId="0" href="#" class="deleteItem">Kaldır</a></td></tr>';
+            detailsTableBody.append(degerler);
             clearItem();
         });
         //After Add A New Order In The List, Clear Clean The Form For Add More Order.
 
         function clearItem() {
-            $("#urun").val('');
-            $("#Fiyat").val('');
-            $("#Adet").val('');
+            $("#Aciklama").val('');
+            $("#BirimFiyat").val('');
+            $("#Miktar").val('');
         }
 
         // After Add A New Order In The List, If You Want, You Can Remove It.
@@ -233,7 +256,7 @@ Adım 3
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
                 type: 'POST',
-                url: "/Siparis/SaveOrder",
+                url: "/Fatura/FaturaKaydet",
                 data: data,
                 success: function (result) {
                     alert(result);
@@ -252,17 +275,26 @@ Adım 3
             orderArr.length = 0;
             $.each($("#detailsTable tbody tr"), function () {
                 orderArr.push({
-                    urun: $(this).find('td:eq(0)').html(),
-                    Adet: $(this).find('td:eq(1)').html(),
-                    Fiyat: $(this).find('td:eq(2)').html(),
-                    Toplam: $(this).find('td:eq(3)').html()
+                    Aciklama: $(this).find('td:eq(0)').html(),
+                    Miktar: $(this).find('td:eq(1)').html(),
+                    BirimFiyat: $(this).find('td:eq(2)').html(),
+                    Tutar: $(this).find('td:eq(3)').html()
                 });
             });
             var data = JSON.stringify({
-                ad: $("#ad").val(),
-                sehir: $("#sehir").val(),
-                order: orderArr
+                FaturaSeriNo: $("#FaturaSeriNo").val(),
+                FaturaSiraNo: $("#FaturaSiraNo").val(),
+                Tarih: $("#Tarih").val(),
+                VergiDairesi: $("#VergiDairesi").val(),
+                TeslimEden: $("#TeslimEden").val(),
+                TeslimAlan: $("#TeslimAlan").val(),
+                Toplam: $("#Toplam").val(),
+                Saat: $("#Saat").val(),
+
+                kalemler: orderArr
             });
+
+
             $.when(saveOrder(data)).then(function (response) {
                 console.log(response);
             }).fail(function (err) {
