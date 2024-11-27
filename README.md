@@ -49,3 +49,16 @@ Technologies Used:
 📍Authorize Attribute for Authentication
 
 📍Bootstrap 5
+
+
+
+<a href="https://hizliresim.com/h2dehk1"><img src="https://i.hizliresim.com/h2dehk1.png" alt="Resim Yükle"></a>
+<a href="https://hizliresim.com/8luvo5j"><img src="https://i.hizliresim.com/8luvo5j.jpg" alt="Resim Yükle"></a>
+<a href="https://hizliresim.com/ncp4dba"><img src="https://i.hizliresim.com/ncp4dba.jpg" alt="Resim Yükle"></a>
+<a href="https://hizliresim.com/tjy0bju"><img src="https://i.hizliresim.com/tjy0bju.jpg" alt="Resim Yükle"></a>
+<a href="https://hizliresim.com/q5og72w"><img src="https://i.hizliresim.com/q5og72w.jpg" alt="Resim Yükle"></a>
+<a href="https://hizliresim.com/jsdgg2t"><img src="https://i.hizliresim.com/jsdgg2t.jpg" alt="Resim Yükle"></a>
+<a href="https://hizliresim.com/2tkvyoe"><img src="https://i.hizliresim.com/2tkvyoe.jpg" alt="Resim Yükle"></a>
+<a href="https://hizliresim.com/g57bniu"><img src="https://i.hizliresim.com/g57bniu.jpg" alt="Resim Yükle"></a>
+<a href="https://hizliresim.com/qu72ydv"><img src="https://i.hizliresim.com/qu72ydv.jpg" alt="Resim Yükle"></a>
+<a href="https://hizliresim.com/ft2g5qo"><img src="https://i.hizliresim.com/ft2g5qo.jpg" alt="Resim Yükle"></a>
